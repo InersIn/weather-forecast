@@ -1,0 +1,102 @@
+{
+    "root": {
+        "0": {
+            "type": "root",
+            "desc": "Did it rain today?",
+            "label": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "ans": {
+                "0": null,
+                "1": null
+            }
+        },
+        "1": {
+            "type": "root",
+            "desc": "Is temperature in your location higher than 26°C?",
+            "label": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "ans": {
+                "0": null,
+                "1": null
+            }
+        },
+        "2": {
+            "type": "root",
+            "desc": "How is humidity in your location? is it higher than 68%?",
+            "label": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "ans": {
+                "0": null,
+                "1": null
+            }
+        },
+        "3": {
+            "type": "root",
+            "desc": "Is the speed of wind higher than 6km/hour?",
+            "label": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "ans": {
+                "0": "2",
+                "1": "2"
+            }
+        }
+    },
+    "chain": {
+        "0": {
+            "type": "chain",
+            "desc": "Are the cloud araound gathering?",
+            "label": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "ans": {
+                "0": "final",
+                "1": "1"
+            }
+        },
+        "1": {
+            "type": "chain",
+            "desc": "Where exactly is cloud gathering?",
+            "label": {
+                "0": "North",
+                "1": "East",
+                "2": "South",
+                "3": "West",
+                "4": "Above Me"
+            },
+            "ans": {
+                "0": "final",
+                "1": "final",
+                "2": "final",
+                "3": "final",
+                "4": "final"
+            }
+        },
+        "2": {
+            "type": "chain",
+            "desc": "Where is the wind direction at your current location ?",
+            "label": {
+                "0": "North",
+                "1": "East",
+                "2": "South",
+                "3": "West",
+                "4": "Not Sure"
+            },
+            "ans": {
+                "0": "0",
+                "1": "0",
+                "2": "0",
+                "3": "0",
+                "4": "0"
+            }
+        }
+    }
+}

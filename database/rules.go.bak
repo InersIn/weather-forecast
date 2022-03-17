@@ -1,0 +1,36 @@
+package database
+
+import (
+	"encoding/json"
+	"fmt"
+	"io/ioutil"
+	"os"
+)
+
+var res Questions
+var err error
+
+func Init() {
+	jsonFile, err := os.Open("./database/rules.json")
+	if err != nil {
+		panic(err)
+	}
+
+	byteValue, err := ioutil.ReadAll(jsonFile)
+	if err != nil {
+		panic(err)
+	}
+
+	json.Unmarshal(byteValue, &res)
+}
+
+func QuestionQuery(types string, id string) (QuestionData, error) {
+	var data QuestionData
+	if types == "root" {
+		data = res.Root[id]
+	} else if types == "chain" {
+		data = res.Chain[id]
+	}
+	fmt.Println(data)
+	return data, err
+}
