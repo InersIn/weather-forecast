@@ -15,3 +15,4 @@ $ `npm install`
 $ `go run server.go`
 
 # Result
+![Web](https://github.com/InersIn/weather-forecast/blob/master/docs/images/web.png?raw=true)
